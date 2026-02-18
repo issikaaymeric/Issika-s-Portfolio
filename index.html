@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aymeric Kouamé — Portfolio</title>
+  <link rel="icon" href="img/avatar.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#" class="nav-logo">AK.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <div class="hero-tag">Open to opportunities</div>
+    <div class="avatar-placeholder">A</div>
+    <h1 class="hero-title">Hi, I'm <em>Aymeric</em>—<br>CS Student & AI enthusiast.</h1>
+    <p class="hero-desc">Passionate about Machine Learning, Deep Learning, and building technology that solves real-world problems.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <p class="section-label reveal">About me</p>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2 class="section-title">Turning ideas into<br>intelligent systems.</h2>
+        <p>I'm Issika Aymeric Théophile Cokanh Kouamé, a computer science student specialising in AI, Machine Learning, and Deep Learning.</p>
+        <p>I'm passionate about leveraging technology to solve real-world problems and love collaborating with entrepreneurs and tech innovators on ambitious projects.</p>
+        <a href="#projects" class="btn btn-primary" style="margin-top:12px;">See my work</a>
+      </div>
+      <div class="about-facts reveal">
+        <div class="fact-card">
+          <div class="fact-number">7+</div>
+          <div class="fact-label">Projects built</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">20+</div>
+          <div class="fact-label">Technologies</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">2</div>
+          <div class="fact-label">Languages (FR / EN)</div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-number">∞</div>
+          <div class="fact-label">Curiosity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Projects -->
+<section id="projects">
+  <div class="projects-header">
+    <div>
+      <p class="section-label reveal">What I've built</p>
+      <h2 class="section-title reveal">Projects</h2>
+    </div>
+    <span class="projects-count reveal">06 works</span>
+  </div>
+
+  <!-- Featured (first) project — full width -->
+  <div class="project-featured reveal">
+    <div class="project-featured-img">
+      <img src="img/opencv-python.png" alt="Face Detection"
+           onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback')">
+      <div class="featured-overlay">
+        <div class="featured-number">01</div>
+        <a href="#" class="featured-cta">View on GitHub ↗</a>
+      </div>
+    </div>
+    <div class="project-featured-body">
+      <div class="project-featured-meta">
+        <span class="tag">Python</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">CNN</span>
+      </div>
+      <h3>Face Detection</h3>
+      <p>A facial recognition system using convolutional neural networks for real-time detection. Built with OpenCV and TensorFlow for high-performance inference.</p>
+      <a href="#" class="project-link">GitHub →</a>
+    </div>
+  </div>
+
+  <!-- Remaining projects — masonry-style grid -->
+  <div class="projects-grid">
+
+    <div class="project-card reveal" style="--delay: 0ms">
+      <div class="project-card-img">
+        <img src="img/handwritten-recognition.jpeg" alt="Handwritten Recognition"
+             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
+        <div class="card-number">02</div>
+        <div class="card-hover-overlay">
+          <a href="https://github.com/issikaaymeric/Face-Recognition" class="card-hover-link">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <h3>Handwritten Recognition</h3>
+        <p>Deep learning model classifying handwritten digits with high accuracy using the MNIST dataset.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">scikit-learn</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/handwritten-digit-recognition-with-scikit-learn" class="card-hover-link">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="--delay: 80ms">
+      <div class="project-card-img">
+        <img src="img/Stock Price Prediction with Machine Learning in Python.jpeg" alt="Stock Price Prediction"
+             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
+        <div class="card-number">03</div>
+        <div class="card-hover-overlay">
+          <a href="https://github.com/issikaaymeric/Stock-Price-Prediction" class="card-hover-link">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <h3>Stock Price Prediction</h3>
+        <p>ML model predicting stock prices using historical market data and time-series analysis.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="--delay: 160ms">
+      <div class="project-card-img">
+        <img src="img/javascript-screenshort.png" alt="JavaScript Tutorial Site"
+             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
+        <div class="card-number">04</div>
+        <div class="card-hover-overlay">
+          <a href="https://github.com/issikaaymeric/Apprendre-les-Bases-de-JavaScript" class="card-hover-link">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <h3>JavaScript Tutorial Site</h3>
+        <p>Bilingual tutorial website for learning JavaScript, available in French and English.</p>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="--delay: 240ms">
+      <div class="project-card-img">
+        <img src="img/python-tutorial-screenshot.png" alt="Python Tutorial Site"
+             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
+        <div class="card-number">05</div>
+        <div class="card-hover-overlay">
+          <a href="https://github.com/issikaaymeric/Python-Tutorial" class="card-hover-link">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <h3>Python Tutorial Site</h3>
+        <p>Comprehensive tutorial website for learning Python from beginner to advanced levels.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">HTML</span><span class="tag">CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arduino card — video support -->
+    <div class="project-card reveal project-card--wide" style="--delay: 320ms">
+      <div class="project-card-img">
+        <video autoplay muted loop playsinline
+               onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
+          <source src="img/arduino-project-video.mp4" type="video/mp4">
+        </video>
+        <div class="card-number">06</div>
+        <div class="card-hover-overlay">
+          <a href="#" class="card-hover-link">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-card-body">
+        <h3>Arduino Rover</h3>
+        <p>A remote-controlled rover built with Arduino and C++ using electronics and sensor integration.</p>
+        <div class="project-tags">
+          <span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">Electronics</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <p class="section-label reveal">What I know</p>
+    <h2 class="section-title reveal">Skills</h2>
+
+    <div class="skills-wrap reveal">
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">HTML & CSS</span>
+      <span class="skill-pill">C#</span>
+      <span class="skill-pill">C++</span>
+      <span class="skill-pill">Deep Learning</span>
+      <span class="skill-pill">Machine Learning</span>
+      <span class="skill-pill">Artificial Intelligence</span>
+      <span class="skill-pill">SQL</span>
+      <span class="skill-pill">NoSQL</span>
+      <span class="skill-pill">Git & GitHub</span>
+      <span class="skill-pill">React Native</span>
+      <span class="skill-pill">Node.js</span>
+      <span class="skill-pill">Express.js</span>
+      <span class="skill-pill">MongoDB</span>
+      <span class="skill-pill">jQuery</span>
+      <span class="skill-pill">Arduino</span>
+      <span class="skill-pill">Problem Solving</span>
+    </div>
+
+    <div class="progress-list reveal" id="progressList">
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">Python</span><span class="progress-pct">90%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="90"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">JavaScript</span><span class="progress-pct">80%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="80"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">HTML & CSS</span><span class="progress-pct">85%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="85"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">Machine Learning / Deep Learning</span><span class="progress-pct">75%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="75"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">C++</span><span class="progress-pct">65%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="65"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">C#</span><span class="progress-pct">75%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="65"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">MySQL / MongoDB</span><span class="progress-pct">70%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="70"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">Git & GitHub</span><span class="progress-pct">80%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="80"></div></div>
+      </div>
+      <div class="progress-item">
+        <div class="progress-header"><span class="progress-name">Node.js / Express</span><span class="progress-pct">60%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="60"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" style="padding: 80px 5%; text-align:center;">
+    <p class="section-label reveal" style="text-align:center;">My resume</p>
+    <h2 class="section-title reveal" style="max-width:500px; margin: 0 auto 16px;">Want to know more about me?</h2>
+    <p class="reveal" style="color: var(--muted); margin-bottom: 32px; max-width:400px; margin-left:auto; margin-right:auto;">Download my resume or view it directly in your browser.</p>
+    <div class="resume-btns reveal">
+      <a href="Resume/Kouame_Issika_Resume.pdf" target="_blank" class="btn btn-primary">View Resume</a>
+      <a href="Resume/Kouame_Issika_Resume.pdf" download class="btn btn-outline">Download PDF</a>
+    </div>
+  </section>
+
+  <!-- Connect -->
+  <section id="connect">
+    <p class="section-label reveal">Find me online</p>
+    <h2 class="section-title reveal">Connect with me</h2>
+    <div class="social-grid reveal">
+      <a href="#" class="social-card">
+        <div class="social-icon"><i class="ri-linkedin-box-fill"></i></div>
+        <div class="social-name">LinkedIn</div>
+        <div class="social-handle">Aymeric Kouamé</div>
+      </a>
+      <a href="https://github.com/issikaaymeric" class="social-card">
+        <div class="social-icon"><i class="ri-github-fill"></i></div>
+        <div class="social-name">GitHub</div>
+        <div class="social-handle">@issikaaymeric</div>
+      </a>
+      <a href="https://x.com/issikaaymeric" class="social-card">
+        <div class="social-icon"><i class="ri-twitter-x-fill"></i></div>
+        <div class="social-name">Twitter / X</div>
+        <div class="social-handle">@issikaaymeric</div>
+      </a>
+      <a href="https://www.instagram.com/issikaaymeric" class="social-card">
+        <div class="social-icon"><i class="ri-instagram-fill"></i></i></div>
+        <div class="social-name">Instagram</div>
+        <div class="social-handle">@issikaaymeric</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="padding: 80px 5%;">
+    <p class="section-label reveal" style="text-align:center;">Let's talk</p>
+    <h2 class="section-title reveal" style="text-align:center;">Get in Touch</h2>
+    <form class="contact-form reveal" id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="jane@example.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Project collaboration...">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Tell me about your project or idea..." required></textarea>
+      </div>
+      <div class="success-msg" id="successMsg">✅ Message sent! I'll get back to you soon.</div>
+      <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Issika Aymeric Kouamé. Crafted with care.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
