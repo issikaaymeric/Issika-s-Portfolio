@@ -11,7 +11,7 @@ navLinks.querySelectorAll('a').forEach(a =>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
       observer.unobserve(entry.target);
     }
   });
@@ -51,7 +51,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
-  // Replace the setTimeout below with a real fetch() call to your backend or email API
   setTimeout(() => {
     document.getElementById('successMsg').style.display = 'block';
     btn.textContent = 'Send Message';
@@ -75,3 +74,28 @@ window.addEventListener('scroll', () => {
       : '';
   });
 }, { passive: true });
+
+// ── Project Filter Tabs ──
+const filterBtns  = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card[data-cat]');
+const projectsCountEl = document.getElementById('projectsCount');
+
+function applyFilter(cat) {
+  let visible = 0;
+  projectCards.forEach(card => {
+    const match = cat === 'all' || card.dataset.cat === cat;
+    card.classList.toggle('is-hidden', !match);
+    if (match) visible++;
+  });
+  if (projectsCountEl) {
+    projectsCountEl.textContent = String(visible).padStart(2, '0') + ' works';
+  }
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilter(btn.dataset.filter);
+  });
+});
