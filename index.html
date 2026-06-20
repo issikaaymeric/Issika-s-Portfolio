@@ -52,8 +52,8 @@
       </div>
       <div class="about-facts reveal">
         <div class="fact-card">
-          <div class="fact-number">7+</div>
-          <div class="fact-label">Projects built</div>
+          <div class="fact-number">39+</div>
+          <div class="fact-label">Public repositories</div>
         </div>
         <div class="fact-card">
           <div class="fact-number">20+</div>
@@ -79,129 +79,231 @@
       <p class="section-label reveal">What I've built</p>
       <h2 class="section-title reveal">Projects</h2>
     </div>
-    <span class="projects-count reveal">06 works</span>
+    <span class="projects-count reveal" id="projectsCount">14 works</span>
   </div>
 
-  <!-- Featured (first) project — full width -->
-  <div class="project-featured reveal">
-    <div class="project-featured-img">
-      <img src="img/opencv-python.png" alt="Face Detection"
-           onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback')">
-      <div class="featured-overlay">
-        <div class="featured-number">01</div>
-        <a href="#" class="featured-cta">View on GitHub ↗</a>
-      </div>
-    </div>
-    <div class="project-featured-body">
-      <div class="project-featured-meta">
-        <span class="tag">Python</span>
-        <span class="tag">TensorFlow</span>
-        <span class="tag">CNN</span>
-      </div>
-      <h3>Face Detection</h3>
-      <p>A facial recognition system using convolutional neural networks for real-time detection. Built with OpenCV and TensorFlow for high-performance inference.</p>
-      <a href="#" class="project-link">GitHub →</a>
-    </div>
+  <div class="projects-filters reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+    <button class="filter-btn" data-filter="ai">IA &amp; Machine Learning</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
   </div>
 
-  <!-- Remaining projects — masonry-style grid -->
   <div class="projects-grid">
 
-    <div class="project-card reveal" style="--delay: 0ms">
+    <div class="project-card reveal" data-cat="fullstack" style="--delay: 0ms">
       <div class="project-card-img">
-        <img src="img/handwritten-recognition.jpeg" alt="Handwritten Recognition"
-             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
-        <div class="card-number">02</div>
-        <div class="card-hover-overlay">
-          <a href="https://github.com/issikaaymeric/Face-Recognition" class="card-hover-link">GitHub ↗</a>
-        </div>
+        <span class="card-cat-badge">Full-Stack</span>
+        <span class="img-fallback-icon">📋</span>
       </div>
       <div class="project-card-body">
-        <h3>Handwritten Recognition</h3>
-        <p>Deep learning model classifying handwritten digits with high accuracy using the MNIST dataset.</p>
+        <h3>CV-Submission</h3>
+        <p>Formulaire de dépôt de candidature avec classification automatique des CVs en 5 catégories métier, stockage Cloudinary et tableau de bord admin.</p>
         <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">scikit-learn</span>
+          <span class="tag">Java / Spring Boot</span><span class="tag">React</span><span class="tag">MySQL</span>
         </div>
-        <a href="https://github.com/issikaaymeric/handwritten-digit-recognition-with-scikit-learn" class="card-hover-link">GitHub ↗</a>
+        <a href="https://github.com/issikaaymeric/CV-Submission" class="project-link">GitHub →</a>
       </div>
     </div>
 
-    <div class="project-card reveal" style="--delay: 80ms">
+    <div class="project-card reveal" data-cat="fullstack" style="--delay: 40ms">
       <div class="project-card-img">
-        <img src="img/Stock Price Prediction with Machine Learning in Python.jpeg" alt="Stock Price Prediction"
-             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
-        <div class="card-number">03</div>
-        <div class="card-hover-overlay">
-          <a href="https://github.com/issikaaymeric/Stock-Price-Prediction" class="card-hover-link">GitHub ↗</a>
+        <span class="card-cat-badge">Full-Stack</span>
+        <span class="img-fallback-icon">🗂️</span>
+      </div>
+      <div class="project-card-body">
+        <h3>Kanban Web App</h3>
+        <p>Tableau Kanban temps réel avec glisser-déposer, authentification et mises à jour optimistes — déployé en production.</p>
+        <div class="project-tags">
+          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Supabase</span>
         </div>
+        <a href="https://github.com/issikaaymeric/Kanban-Web-App" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="fullstack" style="--delay: 80ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Full-Stack</span>
+        <span class="img-fallback-icon">🕷️</span>
+      </div>
+      <div class="project-card-body">
+        <h3>Async Web Scraper &amp; Pipeline</h3>
+        <p>Pipeline de scraping asynchrone combinant I/O concurrente (aiohttp) et parsing CPU-bound, avec upsert SQLAlchemy pour éviter les doublons.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">aiohttp</span><span class="tag">SQLAlchemy</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/async_web_scrapper_pipeline" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="ai" style="--delay: 120ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">🏥</span>
+      </div>
+      <div class="project-card-body">
+        <h3>MedicareAI</h3>
+        <p>Assistant conversationnel santé combinant un frontend React et un backend FastAPI, propulsé par des modèles Transformers (Hugging Face).</p>
+        <div class="project-tags">
+          <span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Transformers</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/medicare-ai" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="fullstack" style="--delay: 160ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Full-Stack</span>
+        <span class="img-fallback-icon">🧠</span>
+      </div>
+      <div class="project-card-body">
+        <h3>Online Code Editor</h3>
+        <p>Éditeur de code en ligne supportant 8 langages avec coloration syntaxique (Ace Editor) et prévisualisation en direct.</p>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span><span class="tag">Ace Editor</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/Online-Code-Editor" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="fullstack" style="--delay: 200ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Full-Stack</span>
+        <span class="img-fallback-icon">🌾</span>
+      </div>
+      <div class="project-card-body">
+        <h3>AgroConnect CI</h3>
+        <p>Site vitrine multi-pages pour une place de marché numérique destinée aux agriculteurs ivoiriens.</p>
+        <div class="project-tags">
+          <span class="tag">HTML/CSS</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/AgroConnect-CI" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="ai" style="--delay: 0ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">🪪</span>
+      </div>
+      <div class="project-card-body">
+        <h3>Face Recognition</h3>
+        <p>Système de vérification faciale en temps réel : flux webcam comparé à une image de référence via DeepFace, avec threading pour la fluidité.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">DeepFace</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/Face-Recognition" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="ai" style="--delay: 40ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">✍️</span>
+      </div>
+      <div class="project-card-body">
+        <h3>Handwritten Digit Recognition</h3>
+        <p>Reconnaissance de chiffres manuscrits (MNIST) via Random Forest, avec interface de dessin interactive construite en Gradio.</p>
+        <div class="project-tags">
+          <span class="tag">scikit-learn</span><span class="tag">Gradio</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/handwritten-digit-recognition-with-scikit-learn" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="ai" style="--delay: 80ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">📈</span>
       </div>
       <div class="project-card-body">
         <h3>Stock Price Prediction</h3>
-        <p>ML model predicting stock prices using historical market data and time-series analysis.</p>
+        <p>Modèle de classification prédisant le mouvement journalier (hausse/baisse) du cours de l'action Apple à partir de données historiques.</p>
         <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow</span>
+          <span class="tag">Python</span><span class="tag">scikit-learn</span>
         </div>
+        <a href="https://github.com/issikaaymeric/Stock-Price-Prediction" class="project-link">GitHub →</a>
       </div>
     </div>
 
-    <div class="project-card reveal" style="--delay: 160ms">
+    <div class="project-card reveal" data-cat="ai" style="--delay: 120ms">
       <div class="project-card-img">
-        <img src="img/javascript-screenshort.png" alt="JavaScript Tutorial Site"
-             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
-        <div class="card-number">04</div>
-        <div class="card-hover-overlay">
-          <a href="https://github.com/issikaaymeric/Apprendre-les-Bases-de-JavaScript" class="card-hover-link">GitHub ↗</a>
-        </div>
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">🥇</span>
       </div>
       <div class="project-card-body">
-        <h3>JavaScript Tutorial Site</h3>
-        <p>Bilingual tutorial website for learning JavaScript, available in French and English.</p>
+        <h3>Gold Price Prediction</h3>
+        <p>Comparaison de deux approches — régression linéaire et réseau de neurones profond — pour prédire le cours de l'or.</p>
         <div class="project-tags">
-          <span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span>
+          <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span>
         </div>
+        <a href="https://github.com/issikaaymeric/Gold-Price-Prediction" class="project-link">GitHub →</a>
       </div>
     </div>
 
-    <div class="project-card reveal" style="--delay: 240ms">
+    <div class="project-card reveal" data-cat="ai" style="--delay: 160ms">
       <div class="project-card-img">
-        <img src="img/python-tutorial-screenshot.png" alt="Python Tutorial Site"
-             onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
-        <div class="card-number">05</div>
-        <div class="card-hover-overlay">
-          <a href="https://github.com/issikaaymeric/Python-Tutorial" class="card-hover-link">GitHub ↗</a>
-        </div>
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">🚗</span>
       </div>
       <div class="project-card-body">
-        <h3>Python Tutorial Site</h3>
-        <p>Comprehensive tutorial website for learning Python from beginner to advanced levels.</p>
+        <h3>Car Price Prediction</h3>
+        <p>Pipeline de prédiction de prix automobile comparant régression linéaire et deep learning, avec visualisation des résidus.</p>
         <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">HTML</span><span class="tag">CSS</span>
+          <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span>
         </div>
+        <a href="https://github.com/issikaaymeric/Car-Price-Prediction" class="project-link">GitHub →</a>
       </div>
     </div>
 
-    <!-- Arduino card — video support -->
-    <div class="project-card reveal project-card--wide" style="--delay: 320ms">
+    <div class="project-card reveal" data-cat="ai" style="--delay: 200ms">
       <div class="project-card-img">
-        <video autoplay muted loop playsinline
-               onerror="this.style.display='none'; this.closest('.project-card-img').classList.add('img-fallback')">
-          <source src="img/arduino-project-video.mp4" type="video/mp4">
-        </video>
-        <div class="card-number">06</div>
-        <div class="card-hover-overlay">
-          <a href="#" class="card-hover-link">GitHub ↗</a>
-        </div>
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">🎾</span>
       </div>
       <div class="project-card-body">
-        <h3>Arduino Rover</h3>
-        <p>A remote-controlled rover built with Arduino and C++ using electronics and sensor integration.</p>
+        <h3>Tennis Ball Detector</h3>
+        <p>Détection d'objets en temps réel sur images et vidéos avec YOLOv8, entraîné sur un dataset Roboflow.</p>
         <div class="project-tags">
-          <span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">Electronics</span>
+          <span class="tag">YOLOv8</span><span class="tag">Computer Vision</span>
         </div>
+        <a href="https://github.com/issikaaymeric/Tennis-Match-Analysis" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="ai" style="--delay: 240ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">IA</span>
+        <span class="img-fallback-icon">🔢</span>
+      </div>
+      <div class="project-card-body">
+        <h3>Neural Network from Scratch</h3>
+        <p>Réseau de neurones feedforward (1 et 2 couches) implémenté uniquement avec NumPy, sans bibliothèque ML — à but pédagogique.</p>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">NumPy</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/Neural-Network" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="mobile" style="--delay: 0ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Mobile</span>
+        <span class="img-fallback-icon">🎬</span>
+      </div>
+      <div class="project-card-body">
+        <h3>MovieDB Android App</h3>
+        <p>Application Android de recherche et consultation de films, développée nativement en Kotlin.</p>
+        <div class="project-tags">
+          <span class="tag">Kotlin</span><span class="tag">Android Studio</span>
+        </div>
+        <a href="https://github.com/issikaaymeric/MovieDB-Android-Application" class="project-link">GitHub →</a>
       </div>
     </div>
 
   </div>
+
+  <p class="projects-footnote reveal">39 dépôts publics au total — voir le profil complet sur <a href="https://github.com/issikaaymeric" target="_blank" rel="noopener">GitHub →</a></p>
 </section>
 
   <!-- Skills -->
@@ -346,6 +448,3 @@
 </body>
 
 </html>
-
-
-
