@@ -18,11 +18,19 @@
   <nav>
     <a href="#" class="nav-logo">AK.</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang-switch lang-switch--mobile" aria-label="Language">
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="fr" type="button">FR</button>
+      </li>
     </ul>
+    <div class="lang-switch lang-switch--desktop" aria-label="Language">
+      <button class="lang-btn" data-lang="en" type="button">EN</button>
+      <button class="lang-btn" data-lang="fr" type="button">FR</button>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -30,42 +38,42 @@
 
   <!-- Hero -->
   <header>
-    <div class="hero-tag">Open to opportunities</div>
+    <div class="hero-tag" data-i18n="hero.tag">Open to opportunities</div>
     <div class="avatar-placeholder">A</div>
-    <h1 class="hero-title">Hi, I'm <em>Aymeric</em>—<br>CS Student & AI enthusiast.</h1>
-    <p class="hero-desc">Passionate about Machine Learning, Deep Learning, and building technology that solves real-world problems.</p>
+    <h1 class="hero-title" data-i18n-html="hero.title">Hi, I'm <em>Aymeric</em>—<br>CS Student & AI enthusiast.</h1>
+    <p class="hero-desc" data-i18n="hero.desc">Passionate about Machine Learning, Deep Learning, and building technology that solves real-world problems.</p>
     <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-outline">Get in touch</a>
+      <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">View Projects</a>
+      <a href="#contact" class="btn btn-outline" data-i18n="hero.cta.contact">Get in touch</a>
     </div>
   </header>
 
   <!-- About -->
   <section id="about">
-    <p class="section-label reveal">About me</p>
+    <p class="section-label reveal" data-i18n="about.label">About me</p>
     <div class="about-grid">
       <div class="about-text reveal">
-        <h2 class="section-title">Turning ideas into<br>intelligent systems.</h2>
-        <p>I'm Issika Aymeric Théophile Cokanh Kouamé, a computer science student specialising in AI, Machine Learning, and Deep Learning.</p>
-        <p>I'm passionate about leveraging technology to solve real-world problems and love collaborating with entrepreneurs and tech innovators on ambitious projects.</p>
-        <a href="#projects" class="btn btn-primary" style="margin-top:12px;">See my work</a>
+        <h2 class="section-title" data-i18n-html="about.title">Turning ideas into<br>intelligent systems.</h2>
+        <p data-i18n="about.p1">I'm Issika Aymeric Théophile Cokanh Kouamé, a computer science student specialising in AI, Machine Learning, and Deep Learning.</p>
+        <p data-i18n="about.p2">I'm passionate about leveraging technology to solve real-world problems and love collaborating with entrepreneurs and tech innovators on ambitious projects.</p>
+        <a href="#projects" class="btn btn-primary" style="margin-top:12px;" data-i18n="about.cta">See my work</a>
       </div>
       <div class="about-facts reveal">
         <div class="fact-card">
           <div class="fact-number">39+</div>
-          <div class="fact-label">Public repositories</div>
+          <div class="fact-label" data-i18n="fact.repos">Public repositories</div>
         </div>
         <div class="fact-card">
           <div class="fact-number">20+</div>
-          <div class="fact-label">Technologies</div>
+          <div class="fact-label" data-i18n="fact.tech">Technologies</div>
         </div>
         <div class="fact-card">
           <div class="fact-number">2</div>
-          <div class="fact-label">Languages (FR / EN)</div>
+          <div class="fact-label" data-i18n="fact.langs">Languages (FR / EN)</div>
         </div>
         <div class="fact-card">
           <div class="fact-number">∞</div>
-          <div class="fact-label">Curiosity</div>
+          <div class="fact-label" data-i18n="fact.curiosity">Curiosity</div>
         </div>
       </div>
     </div>
@@ -76,17 +84,17 @@
 <section id="projects">
   <div class="projects-header">
     <div>
-      <p class="section-label reveal">What I've built</p>
-      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-label reveal" data-i18n="projects.label">What I've built</p>
+      <h2 class="section-title reveal" data-i18n="projects.title">Projects</h2>
     </div>
     <span class="projects-count reveal" id="projectsCount">14 works</span>
   </div>
 
   <div class="projects-filters reveal">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
-    <button class="filter-btn" data-filter="ai">IA &amp; Machine Learning</button>
-    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn active" data-filter="all" data-i18n="projects.filter.all">All</button>
+    <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filter.fullstack">Full-Stack</button>
+    <button class="filter-btn" data-filter="ai" data-i18n="projects.filter.ai">IA &amp; Machine Learning</button>
+    <button class="filter-btn" data-filter="mobile" data-i18n="projects.filter.mobile">Mobile</button>
   </div>
 
   <div class="projects-grid">
@@ -98,7 +106,7 @@
       </div>
       <div class="project-card-body">
         <h3>CV-Submission</h3>
-        <p>Formulaire de dépôt de candidature avec classification automatique des CVs en 5 catégories métier, stockage Cloudinary et tableau de bord admin.</p>
+        <p data-i18n="project.cvsubmission.desc">Job application form with automatic CV classification into 5 job categories, Cloudinary storage, and an admin dashboard.</p>
         <div class="project-tags">
           <span class="tag">Java / Spring Boot</span><span class="tag">React</span><span class="tag">MySQL</span>
         </div>
@@ -113,7 +121,7 @@
       </div>
       <div class="project-card-body">
         <h3>Kanban Web App</h3>
-        <p>Tableau Kanban temps réel avec glisser-déposer, authentification et mises à jour optimistes — déployé en production.</p>
+        <p data-i18n="project.kanban.desc">Real-time Kanban board with drag-and-drop, authentication, and optimistic updates — deployed in production.</p>
         <div class="project-tags">
           <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Supabase</span>
         </div>
@@ -128,7 +136,7 @@
       </div>
       <div class="project-card-body">
         <h3>Async Web Scraper &amp; Pipeline</h3>
-        <p>Pipeline de scraping asynchrone combinant I/O concurrente (aiohttp) et parsing CPU-bound, avec upsert SQLAlchemy pour éviter les doublons.</p>
+        <p data-i18n="project.scraper.desc">Asynchronous scraping pipeline combining concurrent I/O (aiohttp) with CPU-bound parsing, using SQLAlchemy upserts to avoid duplicates.</p>
         <div class="project-tags">
           <span class="tag">Python</span><span class="tag">aiohttp</span><span class="tag">SQLAlchemy</span>
         </div>
@@ -143,7 +151,7 @@
       </div>
       <div class="project-card-body">
         <h3>MedicareAI</h3>
-        <p>Assistant conversationnel santé combinant un frontend React et un backend FastAPI, propulsé par des modèles Transformers (Hugging Face).</p>
+        <p data-i18n="project.medicareai.desc">Health conversational assistant combining a React frontend and FastAPI backend, powered by Transformer models (Hugging Face).</p>
         <div class="project-tags">
           <span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Transformers</span>
         </div>
@@ -158,7 +166,7 @@
       </div>
       <div class="project-card-body">
         <h3>Online Code Editor</h3>
-        <p>Éditeur de code en ligne supportant 8 langages avec coloration syntaxique (Ace Editor) et prévisualisation en direct.</p>
+        <p data-i18n="project.codeeditor.desc">Online code editor supporting 8 languages with syntax highlighting (Ace Editor) and live preview.</p>
         <div class="project-tags">
           <span class="tag">JavaScript</span><span class="tag">Ace Editor</span>
         </div>
@@ -173,7 +181,7 @@
       </div>
       <div class="project-card-body">
         <h3>AgroConnect CI</h3>
-        <p>Site vitrine multi-pages pour une place de marché numérique destinée aux agriculteurs ivoiriens.</p>
+        <p data-i18n="project.agroconnect.desc">Multi-page showcase website for a digital marketplace aimed at Ivorian farmers.</p>
         <div class="project-tags">
           <span class="tag">HTML/CSS</span>
         </div>
@@ -188,7 +196,7 @@
       </div>
       <div class="project-card-body">
         <h3>Face Recognition</h3>
-        <p>Système de vérification faciale en temps réel : flux webcam comparé à une image de référence via DeepFace, avec threading pour la fluidité.</p>
+        <p data-i18n="project.facerecognition.desc">Real-time facial verification system: webcam feed compared against a reference image via DeepFace, using threading for smooth performance.</p>
         <div class="project-tags">
           <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">DeepFace</span>
         </div>
@@ -203,7 +211,7 @@
       </div>
       <div class="project-card-body">
         <h3>Handwritten Digit Recognition</h3>
-        <p>Reconnaissance de chiffres manuscrits (MNIST) via Random Forest, avec interface de dessin interactive construite en Gradio.</p>
+        <p data-i18n="project.digits.desc">Handwritten digit recognition (MNIST) using Random Forest, with an interactive drawing interface built in Gradio.</p>
         <div class="project-tags">
           <span class="tag">scikit-learn</span><span class="tag">Gradio</span>
         </div>
@@ -218,7 +226,7 @@
       </div>
       <div class="project-card-body">
         <h3>Stock Price Prediction</h3>
-        <p>Modèle de classification prédisant le mouvement journalier (hausse/baisse) du cours de l'action Apple à partir de données historiques.</p>
+        <p data-i18n="project.stock.desc">Classification model predicting the daily movement (up/down) of Apple's stock price from historical data.</p>
         <div class="project-tags">
           <span class="tag">Python</span><span class="tag">scikit-learn</span>
         </div>
@@ -233,7 +241,7 @@
       </div>
       <div class="project-card-body">
         <h3>Gold Price Prediction</h3>
-        <p>Comparaison de deux approches — régression linéaire et réseau de neurones profond — pour prédire le cours de l'or.</p>
+        <p data-i18n="project.gold.desc">Comparison of two approaches — linear regression and a deep neural network — for predicting gold prices.</p>
         <div class="project-tags">
           <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span>
         </div>
@@ -248,7 +256,7 @@
       </div>
       <div class="project-card-body">
         <h3>Car Price Prediction</h3>
-        <p>Pipeline de prédiction de prix automobile comparant régression linéaire et deep learning, avec visualisation des résidus.</p>
+        <p data-i18n="project.car.desc">Car price prediction pipeline comparing linear regression and deep learning, with residual visualization.</p>
         <div class="project-tags">
           <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span>
         </div>
@@ -263,7 +271,7 @@
       </div>
       <div class="project-card-body">
         <h3>Tennis Ball Detector</h3>
-        <p>Détection d'objets en temps réel sur images et vidéos avec YOLOv8, entraîné sur un dataset Roboflow.</p>
+        <p data-i18n="project.tennis.desc">Real-time object detection on images and video with YOLOv8, trained on a Roboflow dataset.</p>
         <div class="project-tags">
           <span class="tag">YOLOv8</span><span class="tag">Computer Vision</span>
         </div>
@@ -278,7 +286,7 @@
       </div>
       <div class="project-card-body">
         <h3>Neural Network from Scratch</h3>
-        <p>Réseau de neurones feedforward (1 et 2 couches) implémenté uniquement avec NumPy, sans bibliothèque ML — à but pédagogique.</p>
+        <p data-i18n="project.nnscratch.desc">Feedforward neural network (1 and 2 layers) implemented purely with NumPy, no ML library — for educational purposes.</p>
         <div class="project-tags">
           <span class="tag">Python</span><span class="tag">NumPy</span>
         </div>
@@ -293,7 +301,7 @@
       </div>
       <div class="project-card-body">
         <h3>MovieDB Android App</h3>
-        <p>Application Android de recherche et consultation de films, développée nativement en Kotlin.</p>
+        <p data-i18n="project.moviedb.desc">Android app for searching and browsing movies, natively developed in Kotlin.</p>
         <div class="project-tags">
           <span class="tag">Kotlin</span><span class="tag">Android Studio</span>
         </div>
@@ -303,33 +311,36 @@
 
   </div>
 
-  <p class="projects-footnote reveal">39 dépôts publics au total — voir le profil complet sur <a href="https://github.com/issikaaymeric" target="_blank" rel="noopener">GitHub →</a></p>
+  <p class="projects-footnote reveal">
+    <span data-i18n="projects.footnote.text">39 public repositories in total — see the full profile on</span>
+    <a href="https://github.com/issikaaymeric" target="_blank" rel="noopener" data-i18n="projects.footnote.link"> GitHub →</a>
+  </p>
 </section>
 
   <!-- Skills -->
   <section id="skills">
-    <p class="section-label reveal">What I know</p>
-    <h2 class="section-title reveal">Skills</h2>
+    <p class="section-label reveal" data-i18n="skills.label">What I know</p>
+    <h2 class="section-title reveal" data-i18n="skills.title">Skills</h2>
 
     <div class="skills-wrap reveal">
       <span class="skill-pill">Python</span>
       <span class="skill-pill">JavaScript</span>
-      <span class="skill-pill">HTML & CSS</span>
+      <span class="skill-pill">HTML &amp; CSS</span>
       <span class="skill-pill">C#</span>
       <span class="skill-pill">C++</span>
       <span class="skill-pill">Deep Learning</span>
       <span class="skill-pill">Machine Learning</span>
-      <span class="skill-pill">Artificial Intelligence</span>
+      <span class="skill-pill" data-i18n="skill.ai">Artificial Intelligence</span>
       <span class="skill-pill">SQL</span>
       <span class="skill-pill">NoSQL</span>
-      <span class="skill-pill">Git & GitHub</span>
+      <span class="skill-pill">Git &amp; GitHub</span>
       <span class="skill-pill">React Native</span>
       <span class="skill-pill">Node.js</span>
       <span class="skill-pill">Express.js</span>
       <span class="skill-pill">MongoDB</span>
       <span class="skill-pill">jQuery</span>
       <span class="skill-pill">Arduino</span>
-      <span class="skill-pill">Problem Solving</span>
+      <span class="skill-pill" data-i18n="skill.problemsolving">Problem Solving</span>
     </div>
 
     <div class="progress-list reveal" id="progressList">
@@ -342,7 +353,7 @@
         <div class="progress-track"><div class="progress-fill" data-width="80"></div></div>
       </div>
       <div class="progress-item">
-        <div class="progress-header"><span class="progress-name">HTML & CSS</span><span class="progress-pct">85%</span></div>
+        <div class="progress-header"><span class="progress-name">HTML &amp; CSS</span><span class="progress-pct">85%</span></div>
         <div class="progress-track"><div class="progress-fill" data-width="85"></div></div>
       </div>
       <div class="progress-item">
@@ -362,7 +373,7 @@
         <div class="progress-track"><div class="progress-fill" data-width="70"></div></div>
       </div>
       <div class="progress-item">
-        <div class="progress-header"><span class="progress-name">Git & GitHub</span><span class="progress-pct">80%</span></div>
+        <div class="progress-header"><span class="progress-name">Git &amp; GitHub</span><span class="progress-pct">80%</span></div>
         <div class="progress-track"><div class="progress-fill" data-width="80"></div></div>
       </div>
       <div class="progress-item">
@@ -374,19 +385,19 @@
 
   <!-- Resume -->
   <section id="resume" style="padding: 80px 5%; text-align:center;">
-    <p class="section-label reveal" style="text-align:center;">My resume</p>
-    <h2 class="section-title reveal" style="max-width:500px; margin: 0 auto 16px;">Want to know more about me?</h2>
-    <p class="reveal" style="color: var(--muted); margin-bottom: 32px; max-width:400px; margin-left:auto; margin-right:auto;">Download my resume or view it directly in your browser.</p>
+    <p class="section-label reveal" style="text-align:center;" data-i18n="resume.label">My resume</p>
+    <h2 class="section-title reveal" style="max-width:500px; margin: 0 auto 16px;" data-i18n="resume.title">Want to know more about me?</h2>
+    <p class="reveal" style="color: var(--muted); margin-bottom: 32px; max-width:400px; margin-left:auto; margin-right:auto;" data-i18n="resume.desc">Download my resume or view it directly in your browser.</p>
     <div class="resume-btns reveal">
-      <a href="Resume/CV_Issika_Kouame_EN.pdf" target="_blank" class="btn btn-primary">View Resume</a>
-      <a href="Resume/CV_Issika_Kouame_EN.pdf" download class="btn btn-outline">Download PDF</a>
+      <a href="Resume/CV_Issika_Kouame_EN.pdf" target="_blank" class="btn btn-primary" data-i18n="resume.view">View Resume</a>
+      <a href="Resume/CV_Issika_Kouame_EN.pdf" download class="btn btn-outline" data-i18n="resume.download">Download PDF</a>
     </div>
   </section>
 
   <!-- Connect -->
   <section id="connect">
-    <p class="section-label reveal">Find me online</p>
-    <h2 class="section-title reveal">Connect with me</h2>
+    <p class="section-label reveal" data-i18n="connect.label">Find me online</p>
+    <h2 class="section-title reveal" data-i18n="connect.title">Connect with me</h2>
     <div class="social-grid reveal">
       <a href="https://www.linkedin.com/in/issika-aymeric-kouam%C3%A9-214866373/" class="social-card">
         <div class="social-icon"><i class="ri-linkedin-box-fill"></i></div>
@@ -404,7 +415,7 @@
         <div class="social-handle">@issikaaymeric</div>
       </a>
       <a href="https://www.instagram.com/issikaaymeric" class="social-card">
-        <div class="social-icon"><i class="ri-instagram-fill"></i></i></div>
+        <div class="social-icon"><i class="ri-instagram-fill"></i></div>
         <div class="social-name">Instagram</div>
         <div class="social-handle">@issikaaymeric</div>
       </a>
@@ -413,35 +424,35 @@
 
   <!-- Contact -->
   <section id="contact" style="padding: 80px 5%;">
-    <p class="section-label reveal" style="text-align:center;">Let's talk</p>
-    <h2 class="section-title reveal" style="text-align:center;">Get in Touch</h2>
+    <p class="section-label reveal" style="text-align:center;" data-i18n="contact.label">Let's talk</p>
+    <h2 class="section-title reveal" style="text-align:center;" data-i18n="contact.title">Get in Touch</h2>
     <form class="contact-form reveal" id="contactForm" novalidate>
       <div class="form-row">
         <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Your Name" required>
+          <label for="name" data-i18n="contact.name.label">Your Name</label>
+          <input type="text" id="name" name="name" data-i18n-placeholder="contact.name.placeholder" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" placeholder="jane@example.com" required>
+          <label for="email" data-i18n="contact.email.label">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
         </div>
       </div>
       <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder="Project collaboration...">
+        <label for="subject" data-i18n="contact.subject.label">Subject</label>
+        <input type="text" id="subject" name="subject" data-i18n-placeholder="contact.subject.placeholder" placeholder="Project collaboration...">
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Tell me about your project or idea..." required></textarea>
+        <label for="message" data-i18n="contact.message.label">Message</label>
+        <textarea id="message" name="message" data-i18n-placeholder="contact.message.placeholder" placeholder="Tell me about your project or idea..." required></textarea>
       </div>
-      <div class="success-msg" id="successMsg">✅ Message sent! I'll get back to you soon.</div>
-      <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+      <div class="success-msg" id="successMsg" data-i18n="contact.success">✅ Message sent! I'll get back to you soon.</div>
+      <button type="submit" class="btn btn-primary form-submit" data-i18n="contact.send">Send Message</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Issika Aymeric Kouamé. Crafted with care.</p>
+    <p data-i18n="footer.text">© 2026 Issika Aymeric Kouamé. Crafted with care.</p>
   </footer>
 
   <script src="scripts.js"></script>
