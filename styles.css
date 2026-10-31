@@ -500,3 +500,49 @@ footer {
   #projects, #resume, #contact { margin: 0; border-radius: 0; }
   .fact-card:hover, .project-card:hover { transform: none; }
 }
+
+/* ── Skills: grouped pills, marquee, count-up bars ── */
+.skill-groups { display: flex; flex-direction: column; gap: 28px; margin-bottom: 48px; }
+.skill-group-title {
+  font-size: 0.82rem; font-weight: 700; color: var(--muted);
+  letter-spacing: 0.06em; margin-bottom: 12px;
+}
+.skill-group .skills-wrap { margin-bottom: 0; gap: 8px; }
+.skill-group .skill-pill {
+  opacity: 0; transform: translateY(14px) scale(0.94);
+  transition: opacity 0.5s ease calc(var(--i, 0) * 45ms),
+              transform 0.5s cubic-bezier(0.34,1.56,0.64,1) calc(var(--i, 0) * 45ms),
+              border-color 0.2s, color 0.2s;
+}
+.skill-group.in-view .skill-pill { opacity: 1; transform: none; }
+.skill-group.in-view .skill-pill:hover { transform: translateY(-3px); }
+.skill-group.settled .skill-pill { transition: transform 0.2s, border-color 0.2s, color 0.2s; }
+
+.skill-marquee {
+  overflow: hidden; margin-bottom: 56px; padding: 6px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.marquee-track { display: flex; gap: 14px; width: max-content; animation: marquee 38s linear infinite; }
+.skill-marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-item {
+  white-space: nowrap; font-family: 'DM Serif Display', serif; font-size: 1.5rem;
+  color: var(--border); padding: 0 10px; transition: color 0.2s;
+}
+.marquee-item:nth-child(3n) { color: #cfd9f6; }
+.marquee-item:hover { color: var(--accent); }
+@keyframes marquee { to { transform: translateX(calc(-50% - 7px)); } }
+
+.progress-fill { position: relative; }
+.progress-fill::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform: translateX(-100%); animation: shimmer 2.8s ease-in-out 1.4s infinite;
+}
+@keyframes shimmer { to { transform: translateX(100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-group .skill-pill { opacity: 1; transform: none; transition: none; }
+  .marquee-track, .progress-fill::after { animation: none; }
+  .skill-marquee { overflow-x: auto; }
+}
