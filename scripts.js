@@ -6,6 +6,7 @@ const translations = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "nav.skills": "Skills",
+    "nav.security": "Security",
     "nav.contact": "Contact",
 
     "hero.tag": "Open to opportunities",
@@ -29,26 +30,57 @@ const translations = {
     "projects.title": "Projects",
     "projects.filter.all": "All",
     "projects.filter.fullstack": "Full-Stack",
-    "projects.filter.ai": "IA & Machine Learning",
-    "projects.filter.mobile": "Mobile",
+    "projects.filter.ai": "AI & Machine Learning",
     "projects.count.suffix": "works",
     "projects.footnote.text": "39 public repositories in total — see the full profile on",
     "projects.footnote.link": " GitHub →",
 
-    "project.cvsubmission.desc": "Job application form with automatic CV classification into 5 job categories, Cloudinary storage, and an admin dashboard.",
-    "project.kanban.desc": "Real-time Kanban board with drag-and-drop, authentication, and optimistic updates — deployed in production.",
-    "project.scraper.desc": "Asynchronous scraping pipeline combining concurrent I/O (aiohttp) with CPU-bound parsing, using SQLAlchemy upserts to avoid duplicates.",
-    "project.medicareai.desc": "Health conversational assistant combining a React frontend and FastAPI backend, powered by Transformer models (Hugging Face).",
-    "project.codeeditor.desc": "Online code editor supporting 8 languages with syntax highlighting (Ace Editor) and live preview.",
-    "project.agroconnect.desc": "Multi-page showcase website for a digital marketplace aimed at Ivorian farmers.",
-    "project.facerecognition.desc": "Real-time facial verification system: webcam feed compared against a reference image via DeepFace, using threading for smooth performance.",
-    "project.digits.desc": "Handwritten digit recognition (MNIST) using Random Forest, with an interactive drawing interface built in Gradio.",
-    "project.stock.desc": "Classification model predicting the daily movement (up/down) of Apple's stock price from historical data.",
-    "project.gold.desc": "Comparison of two approaches — linear regression and a deep neural network — for predicting gold prices.",
-    "project.car.desc": "Car price prediction pipeline comparing linear regression and deep learning, with residual visualization.",
-    "project.tennis.desc": "Real-time object detection on images and video with YOLOv8, trained on a Roboflow dataset.",
-    "project.nnscratch.desc": "Feedforward neural network (1 and 2 layers) implemented purely with NumPy, no ML library — for educational purposes.",
-    "project.moviedb.desc": "Android app for searching and browsing movies, natively developed in Kotlin.",
+    "project.source": "View Source",
+
+    "project.grader.sub": "Rubric-agnostic automated assignment evaluation.",
+    "project.grader.b1": "Grades submissions against any rubric and returns structured, criterion-level feedback.",
+    "project.grader.b2": "Every model output is validated against Pydantic schemas before reaching the user.",
+    "project.grader.b3": "Authentication and prompt-injection defenses protect grading integrity.",
+
+    "project.susie.sub": "AI coding assistant for VS Code.",
+    "project.susie.b1": "VS Code extension backed by a Fastify service that streams DeepSeek responses over WebSockets in real time.",
+    "project.susie.b2": "Per-install authentication secures API access and isolates user sessions.",
+
+    "project.agent.sub": "Desktop and CLI assistant that keeps its memory local.",
+    "project.agent.b1": "Persistent SQLite memory with automatic fallback between LLM providers (DeepSeek, Groq).",
+    "project.agent.b2": "Human-in-the-loop approval gate before any sensitive command runs.",
+    "project.agent.b3": "Whisper voice input, with a desktop (PySide6) and CLI interface.",
+
+    "project.scraper.sub": "Concurrent crawler with a price-tracking dashboard.",
+    "project.scraper.b1": "Configurable concurrency limits, retry logic, and robots.txt-compliant crawling.",
+    "project.scraper.b2": "Playwright handles JavaScript-rendered pages.",
+    "project.scraper.b3": "Extraction, normalization, and deduplication feed a Streamlit dashboard with CSV export.",
+
+    "project.stock.sub": "Time-series classification with leakage-safe validation.",
+    "project.stock.b1": "Chronological holdout and expanding-window cross-validation prevent look-ahead bias.",
+    "project.stock.b2": "Benchmarked against a naive baseline; the write-up reports that no model showed meaningful predictive skill.",
+
+    "project.game.sub": "Game-logic fundamentals.",
+    "project.game.b1": "Algorithmic movement, collision detection, and core game loop logic.",
+
+    "security.label": "Cybersecurity",
+    "security.title": "Security labs & CTF",
+    "security.lead": "Hands-on practice from the CompTIA Security+ (SY0-701) preparation track. I carry the same habits into my applications: authentication, input validation, and prompt-injection defense.",
+    "security.wazuh.sub": "Endpoint monitoring, malware and vulnerability detection.",
+    "security.wazuh.b1": "Wazuh manager and Windows agent with Sysmon telemetry and real-time file integrity monitoring on System32 (MD5/SHA-256 hashes).",
+    "security.wazuh.b2": "VirusTotal integration validated end to end: FIM (rule 550) and VirusTotal (rule 87105) alerts correlated on an EICAR test file.",
+    "security.wazuh.b3": "Vulnerability Detector against NVD/CVE data, triaged by CVSS severity, software version, and binary path.",
+    "security.fw.sub": "Default-deny host firewall with iptables.",
+    "security.fw.b1": "Stateful rules with INPUT policy DROP and explicit allows for loopback, SSH, HTTP, HTTPS, and DNS.",
+    "security.fw.b2": "MySQL (port 3306) restricted to a single trusted source IP; ICMP echo disabled.",
+    "security.fw.b3": "LOG rules ahead of the final DROP, with rules persisted across reboots via netfilter-persistent.",
+    "security.net.sub": "Campus network design in Cisco Packet Tracer.",
+    "security.net.b1": "Three switches and one router with six VLANs and router-on-a-stick inter-VLAN routing.",
+    "security.net.b2": "Per-VLAN DHCP pools; guest Wi-Fi and servers isolated on dedicated segments over 802.1Q trunks.",
+    "security.profile": "View Profile",
+    "security.thm.sub": "28 rooms completed, 7 badges.",
+    "security.thm.b1": "13 CTF and exploitation rooms covering web exploitation, privilege escalation, hash cracking, and service misconfiguration.",
+    "security.thm.b2": "Foundations in Active Directory, cryptography, networking, and writing pentest reports.",
 
     "skills.label": "What I know",
     "skills.title": "Skills",
@@ -86,6 +118,7 @@ const translations = {
     "nav.about": "À propos",
     "nav.projects": "Projets",
     "nav.skills": "Compétences",
+    "nav.security": "Sécurité",
     "nav.contact": "Contact",
 
     "hero.tag": "Ouvert aux opportunités",
@@ -110,25 +143,56 @@ const translations = {
     "projects.filter.all": "Tous",
     "projects.filter.fullstack": "Full-Stack",
     "projects.filter.ai": "IA & Machine Learning",
-    "projects.filter.mobile": "Mobile",
     "projects.count.suffix": "réalisations",
     "projects.footnote.text": "39 dépôts publics au total — voir le profil complet sur",
     "projects.footnote.link": " GitHub →",
 
-    "project.cvsubmission.desc": "Formulaire de dépôt de candidature avec classification automatique des CVs en 5 catégories métier, stockage Cloudinary et tableau de bord admin.",
-    "project.kanban.desc": "Tableau Kanban temps réel avec glisser-déposer, authentification et mises à jour optimistes — déployé en production.",
-    "project.scraper.desc": "Pipeline de scraping asynchrone combinant I/O concurrente (aiohttp) et parsing CPU-bound, avec upsert SQLAlchemy pour éviter les doublons.",
-    "project.medicareai.desc": "Assistant conversationnel santé combinant un frontend React et un backend FastAPI, propulsé par des modèles Transformers (Hugging Face).",
-    "project.codeeditor.desc": "Éditeur de code en ligne supportant 8 langages avec coloration syntaxique (Ace Editor) et prévisualisation en direct.",
-    "project.agroconnect.desc": "Site vitrine multi-pages pour une place de marché numérique destinée aux agriculteurs ivoiriens.",
-    "project.facerecognition.desc": "Système de vérification faciale en temps réel : flux webcam comparé à une image de référence via DeepFace, avec threading pour la fluidité.",
-    "project.digits.desc": "Reconnaissance de chiffres manuscrits (MNIST) via Random Forest, avec interface de dessin interactive construite en Gradio.",
-    "project.stock.desc": "Modèle de classification prédisant le mouvement journalier (hausse/baisse) du cours de l'action Apple à partir de données historiques.",
-    "project.gold.desc": "Comparaison de deux approches — régression linéaire et réseau de neurones profond — pour prédire le cours de l'or.",
-    "project.car.desc": "Pipeline de prédiction de prix automobile comparant régression linéaire et deep learning, avec visualisation des résidus.",
-    "project.tennis.desc": "Détection d'objets en temps réel sur images et vidéos avec YOLOv8, entraîné sur un dataset Roboflow.",
-    "project.nnscratch.desc": "Réseau de neurones feedforward (1 et 2 couches) implémenté uniquement avec NumPy, sans bibliothèque ML — à but pédagogique.",
-    "project.moviedb.desc": "Application Android de recherche et consultation de films, développée nativement en Kotlin.",
+    "project.source": "Voir le code",
+
+    "project.grader.sub": "Évaluation automatisée de travaux, indépendante de la grille.",
+    "project.grader.b1": "Évalue les travaux selon n'importe quelle grille et renvoie un retour structuré par critère.",
+    "project.grader.b2": "Chaque sortie du modèle est validée par des schémas Pydantic avant d'atteindre l'utilisateur.",
+    "project.grader.b3": "Authentification et protections contre l'injection de prompt pour garantir l'intégrité des notes.",
+
+    "project.susie.sub": "Assistant de codage IA pour VS Code.",
+    "project.susie.b1": "Extension VS Code reliée à un service Fastify qui diffuse les réponses DeepSeek en temps réel via WebSockets.",
+    "project.susie.b2": "Authentification par installation pour sécuriser l'API et isoler les sessions utilisateur.",
+
+    "project.agent.sub": "Assistant bureau et CLI dont la mémoire reste en local.",
+    "project.agent.b1": "Mémoire SQLite persistante, avec basculement automatique entre fournisseurs LLM (DeepSeek, Groq).",
+    "project.agent.b2": "Validation humaine avant l'exécution de toute commande sensible.",
+    "project.agent.b3": "Saisie vocale Whisper, avec interface bureau (PySide6) et CLI.",
+
+    "project.scraper.sub": "Crawler concurrent avec tableau de bord de suivi des prix.",
+    "project.scraper.b1": "Limites de concurrence configurables, logique de nouvelle tentative et respect du robots.txt.",
+    "project.scraper.b2": "Playwright pour les pages rendues en JavaScript.",
+    "project.scraper.b3": "Extraction, normalisation et déduplication alimentent un tableau de bord Streamlit avec export CSV.",
+
+    "project.stock.sub": "Classification de séries temporelles avec validation sans fuite.",
+    "project.stock.b1": "Holdout chronologique et validation croisée à fenêtre extensible pour éviter le biais d'anticipation.",
+    "project.stock.b2": "Comparé à une baseline naïve ; le rapport conclut qu'aucun modèle ne montre de pouvoir prédictif significatif.",
+
+    "project.game.sub": "Fondamentaux de la logique de jeu.",
+    "project.game.b1": "Déplacements algorithmiques, détection de collisions et boucle de jeu.",
+
+    "security.label": "Cybersécurité",
+    "security.title": "Labos sécurité & CTF",
+    "security.lead": "Pratique issue du parcours de préparation CompTIA Security+ (SY0-701). J'applique les mêmes réflexes dans mes applications : authentification, validation des données et protection contre l'injection de prompt.",
+    "security.wazuh.sub": "Supervision des postes, détection de malwares et de vulnérabilités.",
+    "security.wazuh.b1": "Manager Wazuh et agent Windows avec télémétrie Sysmon et surveillance d'intégrité des fichiers en temps réel sur System32 (hash MD5/SHA-256).",
+    "security.wazuh.b2": "Intégration VirusTotal validée de bout en bout : alertes FIM (règle 550) et VirusTotal (règle 87105) corrélées sur un fichier de test EICAR.",
+    "security.wazuh.b3": "Vulnerability Detector sur les données NVD/CVE, trié par gravité CVSS, version logicielle et chemin du binaire.",
+    "security.fw.sub": "Pare-feu hôte en refus par défaut avec iptables.",
+    "security.fw.b1": "Règles stateful avec politique INPUT en DROP et autorisations explicites : loopback, SSH, HTTP, HTTPS et DNS.",
+    "security.fw.b2": "MySQL (port 3306) limité à une seule IP source de confiance ; écho ICMP désactivé.",
+    "security.fw.b3": "Règles LOG avant le DROP final, avec persistance des règles au redémarrage via netfilter-persistent.",
+    "security.net.sub": "Conception d'un réseau de campus dans Cisco Packet Tracer.",
+    "security.net.b1": "Trois commutateurs et un routeur, six VLAN et routage inter-VLAN en router-on-a-stick.",
+    "security.net.b2": "Pools DHCP par VLAN ; Wi-Fi invité et serveurs isolés sur des segments dédiés via trunks 802.1Q.",
+    "security.profile": "Voir le profil",
+    "security.thm.sub": "28 salles complétées, 7 badges.",
+    "security.thm.b1": "13 salles CTF et d'exploitation : exploitation web, élévation de privilèges, cracking de hash et abus de mauvaises configurations.",
+    "security.thm.b2": "Bases en Active Directory, cryptographie, réseaux et rédaction de rapports de pentest.",
 
     "skills.label": "Ce que je maîtrise",
     "skills.title": "Compétences",
@@ -166,6 +230,12 @@ const translations = {
 const DEFAULT_LANG = 'en';
 let currentLang = DEFAULT_LANG;
 
+// ── Resume files per language ──
+const RESUME_FILES = {
+  en: 'Resume/CV_Issika_Kouame_EN.pdf',
+  fr: 'Resume/CV_Issika_Kouame_FR.pdf'
+};
+
 // ── Apply a language across the page ──
 function applyLanguage(lang) {
   if (!translations[lang]) lang = DEFAULT_LANG;
@@ -196,6 +266,17 @@ function applyLanguage(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+
+  // Point the resume buttons at the matching language version
+  ['resumeView', 'resumeDownload'].forEach(id => {
+    const a = document.getElementById(id);
+    if (a) a.setAttribute('href', RESUME_FILES[lang]);
+  });
+  const previewFrame = document.getElementById('resumePreview');
+  if (previewFrame) {
+    const src = RESUME_FILES[lang] + '#toolbar=0&navpanes=0&view=FitH';
+    if (previewFrame.getAttribute('src') !== src) previewFrame.setAttribute('src', src);
+  }
 
   // Re-apply the live project count with the correct language suffix
   const activeFilterBtn = document.querySelector('.filter-btn.active');
@@ -328,6 +409,33 @@ filterBtns.forEach(btn => {
     applyFilter(btn.dataset.filter);
   });
 });
+
+// ── Project Preview Images (lazy) ──
+// Order: img/projects/<slug>.webp  →  GitHub Open Graph image  →  GitHub logo fallback
+const previewObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const box = entry.target;
+    previewObserver.unobserve(box);
+    const sources = [
+      'img/projects/' + box.dataset.slug + '.webp',
+      'https://opengraph.githubassets.com/1/issikaaymeric/' + box.dataset.repo
+    ];
+    const title = box.parentElement.querySelector('h3').textContent;
+    const img = new Image();
+    let i = 0;
+    img.alt = title + ' — project preview';
+    img.decoding = 'async';
+    img.onload = () => box.classList.add('has-img');
+    img.onerror = () => {
+      if (++i < sources.length) img.src = sources[i];
+      else img.remove(); // GitHub logo fallback stays visible
+    };
+    img.src = sources[0];
+    box.insertBefore(img, box.firstChild);
+  });
+}, { rootMargin: '200px' });
+document.querySelectorAll('.project-card-img[data-repo]').forEach(b => previewObserver.observe(b));
 
 // ── Init ──
 initLanguage();
