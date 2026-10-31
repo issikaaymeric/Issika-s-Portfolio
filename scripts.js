@@ -232,8 +232,8 @@ let currentLang = DEFAULT_LANG;
 
 // ── Resume files per language ──
 const RESUME_FILES = {
-  en: 'Resume/CV_Issika_Kouame_EN.pdf',
-  fr: 'Resume/CV_Issika_Kouame_FR.pdf'
+  en: 'Resume/Issika%20Aymeric%20Kouame%20Resume.pdf',
+  fr: 'Resume/Issika%20Aymeric%20Kouame%20CV%20%28French%29.pdf'
 };
 
 // ── Apply a language across the page ──
