@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aymeric Kouamé — Portfolio</title>
   <link rel="icon" href="img/ak-logo.png">
-  <link href="https://cdn.jsdelivr.net" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +19,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" data-i18n="nav.about">About</a></li>
       <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#security" data-i18n="nav.security">Security</a></li>
       <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       <li class="lang-switch lang-switch--mobile" aria-label="Language">
@@ -87,225 +87,144 @@
       <p class="section-label reveal" data-i18n="projects.label">What I've built</p>
       <h2 class="section-title reveal" data-i18n="projects.title">Projects</h2>
     </div>
-    <span class="projects-count reveal" id="projectsCount">14 works</span>
+    <span class="projects-count reveal" id="projectsCount">6 works</span>
   </div>
 
   <div class="projects-filters reveal">
     <button class="filter-btn active" data-filter="all" data-i18n="projects.filter.all">All</button>
     <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filter.fullstack">Full-Stack</button>
-    <button class="filter-btn" data-filter="ai" data-i18n="projects.filter.ai">IA &amp; Machine Learning</button>
-    <button class="filter-btn" data-filter="mobile" data-i18n="projects.filter.mobile">Mobile</button>
+    <button class="filter-btn" data-filter="ai" data-i18n="projects.filter.ai">AI &amp; Machine Learning</button>
   </div>
 
+  <!-- To add a live demo: put <a class="btn btn-primary btn-sm" href="URL" target="_blank" rel="noopener noreferrer" aria-label="Live demo: NAME (opens in new tab)">Live Demo</a> before the GitHub button.
+       To use your own preview image: add img/projects/<data-slug>.webp (1200x600). Otherwise the GitHub preview image loads automatically. -->
   <div class="projects-grid">
 
-    <div class="project-card reveal" data-cat="fullstack" style="--delay: 0ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">Full-Stack</span>
-        <span class="img-fallback-icon">📋</span>
+    <div class="project-card reveal" data-cat="ai" style="--delay: 0ms">
+      <div class="project-card-img" data-repo="AI-Grader" data-slug="ai-grader">
+        <span class="card-cat-badge">AI</span>
+        <i class="ri-github-fill img-fallback-icon" aria-hidden="true"></i>
       </div>
       <div class="project-card-body">
-        <h3>CV-Submission</h3>
-        <p data-i18n="project.cvsubmission.desc">Job application form with automatic CV classification into 5 job categories, Cloudinary storage, and an admin dashboard.</p>
+        <h3>AI-Grader</h3>
+        <p class="project-sub" data-i18n="project.grader.sub">Rubric-agnostic automated assignment evaluation.</p>
+        <ul class="project-bullets">
+          <li data-i18n="project.grader.b1">Grades submissions against any rubric and returns structured, criterion-level feedback.</li>
+          <li data-i18n="project.grader.b2">Every model output is validated against Pydantic schemas before reaching the user.</li>
+          <li data-i18n="project.grader.b3">Authentication and prompt-injection defenses protect grading integrity.</li>
+        </ul>
         <div class="project-tags">
-          <span class="tag">Java / Spring Boot</span><span class="tag">React</span><span class="tag">MySQL</span>
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Supabase</span><span class="tag">Pydantic</span><span class="tag">LLMs</span>
         </div>
-        <a href="https://github.com/issikaaymeric/CV-Submission" class="project-link">GitHub →</a>
+        <div class="project-actions">
+          <a class="btn btn-outline btn-sm" href="https://github.com/issikaaymeric/AI-Grader" target="_blank" rel="noopener noreferrer" aria-label="View source: AI-Grader on GitHub (opens in new tab)" data-i18n="project.source">View Source</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card reveal" data-cat="fullstack" style="--delay: 40ms">
-      <div class="project-card-img">
+      <div class="project-card-img" data-repo="Susie" data-slug="susie">
         <span class="card-cat-badge">Full-Stack</span>
-        <span class="img-fallback-icon">🗂️</span>
+        <i class="ri-github-fill img-fallback-icon" aria-hidden="true"></i>
       </div>
       <div class="project-card-body">
-        <h3>Kanban Web App</h3>
-        <p data-i18n="project.kanban.desc">Real-time Kanban board with drag-and-drop, authentication, and optimistic updates — deployed in production.</p>
+        <h3>Susie — AI Coding Assistant</h3>
+        <p class="project-sub" data-i18n="project.susie.sub">AI coding assistant for VS Code.</p>
+        <ul class="project-bullets">
+          <li data-i18n="project.susie.b1">VS Code extension backed by a Fastify service that streams DeepSeek responses over WebSockets in real time.</li>
+          <li data-i18n="project.susie.b2">Per-install authentication secures API access and isolates user sessions.</li>
+        </ul>
         <div class="project-tags">
-          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Supabase</span>
+          <span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Fastify</span><span class="tag">WebSockets</span><span class="tag">DeepSeek API</span>
         </div>
-        <a href="https://github.com/issikaaymeric/Kanban-Web-App" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="fullstack" style="--delay: 80ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">Full-Stack</span>
-        <span class="img-fallback-icon">🕷️</span>
-      </div>
-      <div class="project-card-body">
-        <h3>Async Web Scraper &amp; Pipeline</h3>
-        <p data-i18n="project.scraper.desc">Asynchronous scraping pipeline combining concurrent I/O (aiohttp) with CPU-bound parsing, using SQLAlchemy upserts to avoid duplicates.</p>
-        <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">aiohttp</span><span class="tag">SQLAlchemy</span>
+        <div class="project-actions">
+          <a class="btn btn-outline btn-sm" href="https://github.com/issikaaymeric/Susie" target="_blank" rel="noopener noreferrer" aria-label="View source: Susie on GitHub (opens in new tab)" data-i18n="project.source">View Source</a>
         </div>
-        <a href="https://github.com/issikaaymeric/async_web_scrapper_pipeline" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="ai" style="--delay: 120ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">🏥</span>
-      </div>
-      <div class="project-card-body">
-        <h3>MedicareAI</h3>
-        <p data-i18n="project.medicareai.desc">Health conversational assistant combining a React frontend and FastAPI backend, powered by Transformer models (Hugging Face).</p>
-        <div class="project-tags">
-          <span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Transformers</span>
-        </div>
-        <a href="https://github.com/issikaaymeric/medicare-ai" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="fullstack" style="--delay: 160ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">Full-Stack</span>
-        <span class="img-fallback-icon">🧠</span>
-      </div>
-      <div class="project-card-body">
-        <h3>Online Code Editor</h3>
-        <p data-i18n="project.codeeditor.desc">Online code editor supporting 8 languages with syntax highlighting (Ace Editor) and live preview.</p>
-        <div class="project-tags">
-          <span class="tag">JavaScript</span><span class="tag">Ace Editor</span>
-        </div>
-        <a href="https://github.com/issikaaymeric/Online-Code-Editor" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="fullstack" style="--delay: 200ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">Full-Stack</span>
-        <span class="img-fallback-icon">🌾</span>
-      </div>
-      <div class="project-card-body">
-        <h3>AgroConnect CI</h3>
-        <p data-i18n="project.agroconnect.desc">Multi-page showcase website for a digital marketplace aimed at Ivorian farmers.</p>
-        <div class="project-tags">
-          <span class="tag">HTML/CSS</span>
-        </div>
-        <a href="https://github.com/issikaaymeric/AgroConnect-CI" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="ai" style="--delay: 0ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">🪪</span>
-      </div>
-      <div class="project-card-body">
-        <h3>Face Recognition</h3>
-        <p data-i18n="project.facerecognition.desc">Real-time facial verification system: webcam feed compared against a reference image via DeepFace, using threading for smooth performance.</p>
-        <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">DeepFace</span>
-        </div>
-        <a href="https://github.com/issikaaymeric/Face-Recognition" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="ai" style="--delay: 40ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">✍️</span>
-      </div>
-      <div class="project-card-body">
-        <h3>Handwritten Digit Recognition</h3>
-        <p data-i18n="project.digits.desc">Handwritten digit recognition (MNIST) using Random Forest, with an interactive drawing interface built in Gradio.</p>
-        <div class="project-tags">
-          <span class="tag">scikit-learn</span><span class="tag">Gradio</span>
-        </div>
-        <a href="https://github.com/issikaaymeric/handwritten-digit-recognition-with-scikit-learn" class="project-link">GitHub →</a>
       </div>
     </div>
 
     <div class="project-card reveal" data-cat="ai" style="--delay: 80ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">📈</span>
+      <div class="project-card-img" data-repo="ai-agent" data-slug="ai-agent">
+        <span class="card-cat-badge">AI</span>
+        <i class="ri-github-fill img-fallback-icon" aria-hidden="true"></i>
       </div>
       <div class="project-card-body">
-        <h3>Stock Price Prediction</h3>
-        <p data-i18n="project.stock.desc">Classification model predicting the daily movement (up/down) of Apple's stock price from historical data.</p>
+        <h3>Local-First AI Agent</h3>
+        <p class="project-sub" data-i18n="project.agent.sub">Desktop and CLI assistant that keeps its memory local.</p>
+        <ul class="project-bullets">
+          <li data-i18n="project.agent.b1">Persistent SQLite memory with automatic fallback between LLM providers (DeepSeek, Groq).</li>
+          <li data-i18n="project.agent.b2">Human-in-the-loop approval gate before any sensitive command runs.</li>
+          <li data-i18n="project.agent.b3">Whisper voice input, with a desktop (PySide6) and CLI interface.</li>
+        </ul>
         <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">scikit-learn</span>
+          <span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">SQLite</span><span class="tag">DeepSeek</span><span class="tag">Groq</span><span class="tag">PySide6</span><span class="tag">Whisper</span>
         </div>
-        <a href="https://github.com/issikaaymeric/Stock-Price-Prediction" class="project-link">GitHub →</a>
+        <div class="project-actions">
+          <a class="btn btn-outline btn-sm" href="https://github.com/issikaaymeric/ai-agent" target="_blank" rel="noopener noreferrer" aria-label="View source: Local-First AI Agent on GitHub (opens in new tab)" data-i18n="project.source">View Source</a>
+        </div>
       </div>
     </div>
 
-    <div class="project-card reveal" data-cat="ai" style="--delay: 120ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">🥇</span>
+    <div class="project-card reveal" data-cat="fullstack" style="--delay: 120ms">
+      <div class="project-card-img" data-repo="async_web_scrapper_pipeline" data-slug="async-scraper">
+        <span class="card-cat-badge">Full-Stack</span>
+        <i class="ri-github-fill img-fallback-icon" aria-hidden="true"></i>
       </div>
       <div class="project-card-body">
-        <h3>Gold Price Prediction</h3>
-        <p data-i18n="project.gold.desc">Comparison of two approaches — linear regression and a deep neural network — for predicting gold prices.</p>
+        <h3>Async Web Scraper &amp; Data Pipeline</h3>
+        <p class="project-sub" data-i18n="project.scraper.sub">Concurrent crawler with a price-tracking dashboard.</p>
+        <ul class="project-bullets">
+          <li data-i18n="project.scraper.b1">Configurable concurrency limits, retry logic, and robots.txt-compliant crawling.</li>
+          <li data-i18n="project.scraper.b2">Playwright handles JavaScript-rendered pages.</li>
+          <li data-i18n="project.scraper.b3">Extraction, normalization, and deduplication feed a Streamlit dashboard with CSV export.</li>
+        </ul>
         <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span>
+          <span class="tag">Python</span><span class="tag">aiohttp</span><span class="tag">Playwright</span><span class="tag">SQLAlchemy</span><span class="tag">SQLite</span><span class="tag">Streamlit</span>
         </div>
-        <a href="https://github.com/issikaaymeric/Gold-Price-Prediction" class="project-link">GitHub →</a>
+        <div class="project-actions">
+          <a class="btn btn-outline btn-sm" href="https://github.com/issikaaymeric/async_web_scrapper_pipeline" target="_blank" rel="noopener noreferrer" aria-label="View source: Async Web Scraper on GitHub (opens in new tab)" data-i18n="project.source">View Source</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card reveal" data-cat="ai" style="--delay: 160ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">🚗</span>
+      <div class="project-card-img" data-repo="Stock-Price-Prediction" data-slug="stock-direction">
+        <span class="card-cat-badge">AI</span>
+        <i class="ri-github-fill img-fallback-icon" aria-hidden="true"></i>
       </div>
       <div class="project-card-body">
-        <h3>Car Price Prediction</h3>
-        <p data-i18n="project.car.desc">Car price prediction pipeline comparing linear regression and deep learning, with residual visualization.</p>
+        <h3>Stock Price Direction Prediction</h3>
+        <p class="project-sub" data-i18n="project.stock.sub">Time-series classification with leakage-safe validation.</p>
+        <ul class="project-bullets">
+          <li data-i18n="project.stock.b1">Chronological holdout and expanding-window cross-validation prevent look-ahead bias.</li>
+          <li data-i18n="project.stock.b2">Benchmarked against a naive baseline; the write-up reports that no model showed meaningful predictive skill.</li>
+        </ul>
         <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span>
+          <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">XGBoost</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">yfinance</span>
         </div>
-        <a href="https://github.com/issikaaymeric/Car-Price-Prediction" class="project-link">GitHub →</a>
+        <div class="project-actions">
+          <a class="btn btn-outline btn-sm" href="https://github.com/issikaaymeric/Stock-Price-Prediction" target="_blank" rel="noopener noreferrer" aria-label="View source: Stock Price Direction Prediction on GitHub (opens in new tab)" data-i18n="project.source">View Source</a>
+        </div>
       </div>
     </div>
 
-    <div class="project-card reveal" data-cat="ai" style="--delay: 200ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">🎾</span>
+    <div class="project-card reveal" data-cat="other" style="--delay: 200ms">
+      <div class="project-card-img" data-repo="GameDevPython" data-slug="gamedev-python">
+        <span class="card-cat-badge">Mini</span>
+        <i class="ri-github-fill img-fallback-icon" aria-hidden="true"></i>
       </div>
       <div class="project-card-body">
-        <h3>Tennis Ball Detector</h3>
-        <p data-i18n="project.tennis.desc">Real-time object detection on images and video with YOLOv8, trained on a Roboflow dataset.</p>
+        <h3>GameDev Python</h3>
+        <p class="project-sub" data-i18n="project.game.sub">Game-logic fundamentals.</p>
+        <ul class="project-bullets">
+          <li data-i18n="project.game.b1">Algorithmic movement, collision detection, and core game loop logic.</li>
+        </ul>
         <div class="project-tags">
-          <span class="tag">YOLOv8</span><span class="tag">Computer Vision</span>
+          <span class="tag">Python</span><span class="tag">Pygame</span>
         </div>
-        <a href="https://github.com/issikaaymeric/Tennis-Match-Analysis" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="ai" style="--delay: 240ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">IA</span>
-        <span class="img-fallback-icon">🔢</span>
-      </div>
-      <div class="project-card-body">
-        <h3>Neural Network from Scratch</h3>
-        <p data-i18n="project.nnscratch.desc">Feedforward neural network (1 and 2 layers) implemented purely with NumPy, no ML library — for educational purposes.</p>
-        <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">NumPy</span>
+        <div class="project-actions">
+          <a class="btn btn-outline btn-sm" href="https://github.com/issikaaymeric/GameDevPython" target="_blank" rel="noopener noreferrer" aria-label="View source: GameDev Python on GitHub (opens in new tab)" data-i18n="project.source">View Source</a>
         </div>
-        <a href="https://github.com/issikaaymeric/Neural-Network" class="project-link">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal" data-cat="mobile" style="--delay: 0ms">
-      <div class="project-card-img">
-        <span class="card-cat-badge">Mobile</span>
-        <span class="img-fallback-icon">🎬</span>
-      </div>
-      <div class="project-card-body">
-        <h3>MovieDB Android App</h3>
-        <p data-i18n="project.moviedb.desc">Android app for searching and browsing movies, natively developed in Kotlin.</p>
-        <div class="project-tags">
-          <span class="tag">Kotlin</span><span class="tag">Android Studio</span>
-        </div>
-        <a href="https://github.com/issikaaymeric/MovieDB-Android-Application" class="project-link">GitHub →</a>
       </div>
     </div>
 
@@ -315,6 +234,84 @@
     <span data-i18n="projects.footnote.text">39 public repositories in total — see the full profile on</span>
     <a href="https://github.com/issikaaymeric" target="_blank" rel="noopener" data-i18n="projects.footnote.link"> GitHub →</a>
   </p>
+</section>
+
+<!-- Cybersecurity -->
+<section id="security">
+  <p class="section-label reveal" data-i18n="security.label">Cybersecurity</p>
+  <h2 class="section-title reveal" data-i18n="security.title">Security labs &amp; CTF</h2>
+  <p class="security-lead reveal" data-i18n="security.lead">Hands-on practice from the CompTIA Security+ (SY0-701) preparation track. I carry the same habits into my applications: authentication, input validation, and prompt-injection defense.</p>
+  <div class="projects-grid">
+    <div class="project-card sec-card reveal" style="--delay: 0ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Security</span>
+        <img class="sec-logo" src="https://cdn.simpleicons.org/wazuh/005571" alt="Wazuh logo" loading="lazy" decoding="async" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+        <i class="ri-shield-keyhole-line img-fallback-icon" aria-hidden="true"></i>
+      </div>
+      <div class="project-card-body">
+        <h3>Wazuh SIEM Home Lab</h3>
+        <p class="project-sub" data-i18n="security.wazuh.sub">Endpoint monitoring, malware and vulnerability detection.</p>
+        <ul class="project-bullets">
+          <li data-i18n="security.wazuh.b1">Wazuh manager and Windows agent with Sysmon telemetry and real-time file integrity monitoring on System32 (MD5/SHA-256 hashes).</li>
+          <li data-i18n="security.wazuh.b2">VirusTotal integration validated end to end: FIM (rule 550) and VirusTotal (rule 87105) alerts correlated on an EICAR test file.</li>
+          <li data-i18n="security.wazuh.b3">Vulnerability Detector against NVD/CVE data, triaged by CVSS severity, software version, and binary path.</li>
+        </ul>
+        <div class="project-tags"><span class="tag">Wazuh</span><span class="tag">Sysmon</span><span class="tag">VirusTotal</span><span class="tag">VirtualBox</span><span class="tag">Kali Linux</span></div>
+      </div>
+    </div>
+    <div class="project-card sec-card reveal" style="--delay: 40ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Security</span>
+        <img class="sec-logo" src="https://cdn.simpleicons.org/linux/1a1a1a" alt="Linux logo" loading="lazy" decoding="async" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+        <i class="ri-fire-line img-fallback-icon" aria-hidden="true"></i>
+      </div>
+      <div class="project-card-body">
+        <h3>Linux Firewall Hardening</h3>
+        <p class="project-sub" data-i18n="security.fw.sub">Default-deny host firewall with iptables.</p>
+        <ul class="project-bullets">
+          <li data-i18n="security.fw.b1">Stateful rules with INPUT policy DROP and explicit allows for loopback, SSH, HTTP, HTTPS, and DNS.</li>
+          <li data-i18n="security.fw.b2">MySQL (port 3306) restricted to a single trusted source IP; ICMP echo disabled.</li>
+          <li data-i18n="security.fw.b3">LOG rules ahead of the final DROP, with rules persisted across reboots via netfilter-persistent.</li>
+        </ul>
+        <div class="project-tags"><span class="tag">iptables</span><span class="tag">netfilter</span><span class="tag">Kali Linux</span></div>
+      </div>
+    </div>
+    <div class="project-card sec-card reveal" style="--delay: 80ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Security</span>
+        <img class="sec-logo" src="https://cdn.simpleicons.org/cisco/049fd9" alt="Cisco logo" loading="lazy" decoding="async" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+        <i class="ri-router-line img-fallback-icon" aria-hidden="true"></i>
+      </div>
+      <div class="project-card-body">
+        <h3>Segmented School Network</h3>
+        <p class="project-sub" data-i18n="security.net.sub">Campus network design in Cisco Packet Tracer.</p>
+        <ul class="project-bullets">
+          <li data-i18n="security.net.b1">Three switches and one router with six VLANs and router-on-a-stick inter-VLAN routing.</li>
+          <li data-i18n="security.net.b2">Per-VLAN DHCP pools; guest Wi-Fi and servers isolated on dedicated segments over 802.1Q trunks.</li>
+        </ul>
+        <div class="project-tags"><span class="tag">VLANs</span><span class="tag">802.1Q</span><span class="tag">DHCP</span><span class="tag">Packet Tracer</span></div>
+      </div>
+    </div>
+    <div class="project-card sec-card reveal" style="--delay: 120ms">
+      <div class="project-card-img">
+        <span class="card-cat-badge">Security</span>
+        <img class="sec-profile" src="https://cdn-images.tryhackme.com/public-profile/issikathereal/bd0b8323d98b.png" alt="TryHackMe profile card for issikathereal" loading="lazy" decoding="async" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+        <i class="ri-flag-line img-fallback-icon" aria-hidden="true"></i>
+      </div>
+      <div class="project-card-body">
+        <h3>TryHackMe — Top 20%</h3>
+        <p class="project-sub" data-i18n="security.thm.sub">28 rooms completed, 7 badges.</p>
+        <ul class="project-bullets">
+          <li data-i18n="security.thm.b1">13 CTF and exploitation rooms covering web exploitation, privilege escalation, hash cracking, and service misconfiguration.</li>
+          <li data-i18n="security.thm.b2">Foundations in Active Directory, cryptography, networking, and writing pentest reports.</li>
+        </ul>
+        <div class="project-tags"><span class="tag">Pentesting</span><span class="tag">Privilege Escalation</span><span class="tag">Active Directory</span></div>
+        <div class="project-actions">
+          <a class="btn btn-outline btn-sm" href="https://tryhackme.com/p/issikathereal" target="_blank" rel="noopener noreferrer" aria-label="View my TryHackMe profile (opens in new tab)" data-i18n="security.profile">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
   <!-- Skills -->
@@ -388,9 +385,12 @@
     <p class="section-label reveal" style="text-align:center;" data-i18n="resume.label">My resume</p>
     <h2 class="section-title reveal" style="max-width:500px; margin: 0 auto 16px;" data-i18n="resume.title">Want to know more about me?</h2>
     <p class="reveal" style="color: var(--muted); margin-bottom: 32px; max-width:400px; margin-left:auto; margin-right:auto;" data-i18n="resume.desc">Download my resume or view it directly in your browser.</p>
+    <div class="resume-preview reveal">
+      <iframe id="resumePreview" title="Resume preview (PDF)" src="Resume/CV_Issika_Kouame_EN.pdf#toolbar=0&amp;navpanes=0&amp;view=FitH" loading="lazy"></iframe>
+    </div>
     <div class="resume-btns reveal">
-      <a href="Resume/CV_Issika_Kouame_EN.pdf" target="_blank" class="btn btn-primary" data-i18n="resume.view">View Resume</a>
-      <a href="Resume/CV_Issika_Kouame_EN.pdf" download class="btn btn-outline" data-i18n="resume.download">Download PDF</a>
+      <a href="Resume/CV_Issika_Kouame_EN.pdf" target="_blank" rel="noopener" class="btn btn-primary" id="resumeView" data-i18n="resume.view">View Resume</a>
+      <a href="Resume/CV_Issika_Kouame_EN.pdf" download class="btn btn-outline" id="resumeDownload" data-i18n="resume.download">Download PDF</a>
     </div>
   </section>
 
