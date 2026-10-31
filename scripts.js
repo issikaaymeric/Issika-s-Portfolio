@@ -84,6 +84,13 @@ const translations = {
 
     "skills.label": "What I know",
     "skills.title": "Skills",
+    "skills.g.lang": "Languages",
+    "skills.g.backend": "Backend & APIs",
+    "skills.g.front": "Frontend & Mobile",
+    "skills.g.ai": "AI & Data",
+    "skills.g.db": "Databases",
+    "skills.g.sec": "Security & Networking",
+    "skills.g.tools": "Tools",
     "skill.ai": "Artificial Intelligence",
     "skill.problemsolving": "Problem Solving",
 
@@ -196,6 +203,13 @@ const translations = {
 
     "skills.label": "Ce que je maîtrise",
     "skills.title": "Compétences",
+    "skills.g.lang": "Langages",
+    "skills.g.backend": "Backend & API",
+    "skills.g.front": "Frontend & Mobile",
+    "skills.g.ai": "IA & Données",
+    "skills.g.db": "Bases de données",
+    "skills.g.sec": "Sécurité & Réseaux",
+    "skills.g.tools": "Outils",
     "skill.ai": "Intelligence Artificielle",
     "skill.problemsolving": "Résolution de problèmes",
 
@@ -319,8 +333,20 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const progressObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.progress-fill').forEach(bar => {
-        bar.style.width = bar.dataset.width + '%';
+      entry.target.querySelectorAll('.progress-fill').forEach((bar, idx) => {
+        const target = parseInt(bar.dataset.width, 10);
+        const pct = bar.closest('.progress-item').querySelector('.progress-pct');
+        // Stagger each bar, then fill it while counting the percentage up
+        setTimeout(() => {
+          bar.style.width = target + '%';
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { pct.textContent = target + '%'; return; }
+          const start = performance.now(), dur = 1200;
+          (function tick(now) {
+            const p = Math.min((now - start) / dur, 1);
+            pct.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + '%';
+            if (p < 1) requestAnimationFrame(tick);
+          })(start);
+        }, idx * 90);
       });
       progressObserver.unobserve(entry.target);
     }
@@ -328,6 +354,19 @@ const progressObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 const progressList = document.getElementById('progressList');
 if (progressList) progressObserver.observe(progressList);
+
+// ── Skill groups: staggered pill entrance ──
+const skillGroupObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const g = entry.target;
+    g.classList.add('in-view');
+    skillGroupObserver.unobserve(g);
+    // After the entrance finishes, drop the stagger delay so hover stays instant
+    setTimeout(() => g.classList.add('settled'), 1500);
+  });
+}, { threshold: 0.25 });
+document.querySelectorAll('.skill-group').forEach(g => skillGroupObserver.observe(g));
 
 // ── Contact Form (sends to issikathereal@gmail.com via FormSubmit) ──
 document.getElementById('contactForm').addEventListener('submit', function (e) {
