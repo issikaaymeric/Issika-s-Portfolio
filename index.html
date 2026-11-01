@@ -85,7 +85,7 @@
   <div class="projects-header">
     <div>
       <p class="section-label reveal" data-i18n="projects.label">What I've built</p>
-      <h2 class="section-title reveal" data-i18n="projects.title">Projects</h2>
+      <h2 class="section-title reveal" data-i18n="projects.title">Featured Projects &amp; Experience</h2>
     </div>
     <span class="projects-count reveal" id="projectsCount">6 works</span>
   </div>
@@ -95,6 +95,91 @@
     <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filter.fullstack">Full-Stack</button>
     <button class="filter-btn" data-filter="ai" data-i18n="projects.filter.ai">AI &amp; Machine Learning</button>
   </div>
+
+  <article class="featured-experience reveal" aria-labelledby="atihmam-title">
+    <header class="featured-experience-header">
+      <div class="featured-experience-logo">
+        <img src="https://github.com/user-attachments/assets/3112a72b-d917-4df2-a5a1-2fb5845ea896" alt="Atihmam Conseils logo" loading="lazy" decoding="async" onerror="this.hidden=true; this.parentElement.classList.add('media-unavailable')">
+        <span data-i18n="project.atihmam.logo.fallback">Atihmam</span>
+      </div>
+      <div class="featured-experience-heading">
+        <p class="featured-eyebrow" data-i18n="project.atihmam.eyebrow">Flagship experience · Atihmam Conseils</p>
+        <h3 id="atihmam-title">Atihmam ATS</h3>
+        <p class="featured-role" data-i18n="project.atihmam.role">Software Engineering Intern · Full-Stack &amp; Backend</p>
+      </div>
+      <span class="featured-status" data-i18n="project.atihmam.status">Production application</span>
+    </header>
+
+    <p class="featured-summary" data-i18n="project.atihmam.summary">Built and maintain an AI-powered applicant tracking system that turns CV intake into a structured, explainable recruitment workflow—from document parsing and candidate scoring to recruiter decisions.</p>
+
+    <div class="featured-highlights">
+      <section class="featured-highlight">
+        <h4 data-i18n="project.atihmam.pipeline.title">Reliable CV processing</h4>
+        <p data-i18n="project.atihmam.pipeline.copy">PDF uploads move through an asynchronous Celery pipeline: SHA-256 hashing prevents duplicate processing, pdfplumber extracts text, and structured candidate data is persisted to PostgreSQL.</p>
+      </section>
+      <section class="featured-highlight">
+        <h4 data-i18n="project.atihmam.scoring.title">Multi-dimensional AI scoring</h4>
+        <p data-i18n="project.atihmam.scoring.copy">A seven-dimension scoring engine evaluates role fit, skills, experience, projects, and credentials with Google Gemini, backed by fallback LLM providers and recruiter-feedback-driven score adaptation.</p>
+      </section>
+      <section class="featured-highlight">
+        <h4 data-i18n="project.atihmam.workflow.title">Recruitment workflow automation</h4>
+        <p data-i18n="project.atihmam.workflow.copy">A six-stage Kanban pipeline applies state-machine validation to candidate transitions, while Google Drive webhooks keep document changes synchronized automatically.</p>
+      </section>
+      <section class="featured-highlight">
+        <h4 data-i18n="project.atihmam.architecture.title">Production-ready split architecture</h4>
+        <p data-i18n="project.atihmam.architecture.copy">React 19, Vite, and Tailwind CSS on Vercel connect to a Python 3.11 FastAPI service on Render, with Supabase PostgreSQL, Valkey/Redis, and Celery workers for durable background processing.</p>
+      </section>
+    </div>
+
+    <div class="featured-tech" aria-label="Technology stack">
+      <span class="tag">FastAPI</span><span class="tag">Python 3.11</span><span class="tag">React 19</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span><span class="tag">Supabase PostgreSQL</span><span class="tag">Celery</span><span class="tag">Valkey / Redis</span><span class="tag">Google Gemini</span><span class="tag">Google Drive API</span>
+    </div>
+
+    <div class="featured-media">
+      <figure class="featured-visual">
+        <img src="https://github.com/user-attachments/assets/14f04546-fa68-4c55-a51b-f47501b5f1b6" alt="Atihmam ATS recruiter dashboard interface" loading="lazy" decoding="async" onerror="this.hidden=true; this.parentElement.classList.add('media-unavailable')">
+        <span class="featured-media-fallback" data-i18n="project.atihmam.preview.fallback">Preview unavailable — explore the live product.</span>
+        <figcaption data-i18n="project.atihmam.ui.caption">Recruiter interface · candidate review and pipeline</figcaption>
+      </figure>
+      <figure class="featured-visual featured-architecture">
+        <img src="https://github.com/user-attachments/assets/25f494a5-08f6-43e4-9b42-20e2f84d578d" alt="Atihmam ATS system architecture diagram showing the frontend, API, database, task queue, and AI integrations" loading="lazy" decoding="async" onerror="this.hidden=true; this.parentElement.classList.add('media-unavailable')">
+        <span class="featured-media-fallback" data-i18n="project.atihmam.preview.fallback">Preview unavailable — explore the live product.</span>
+        <figcaption data-i18n="project.atihmam.architecture.caption">System architecture · web app, API, data, workers, and AI</figcaption>
+      </figure>
+    </div>
+
+    <div class="featured-demos">
+      <h4 data-i18n="project.atihmam.demos.title">Product walkthroughs</h4>
+      <div class="featured-demo-grid">
+        <figure class="featured-demo">
+          <video controls preload="metadata" playsinline poster="https://github.com/user-attachments/assets/14f04546-fa68-4c55-a51b-f47501b5f1b6" aria-label="Atihmam ATS product demo 1" onloadedmetadata="this.classList.add('media-ready'); this.parentElement.classList.add('media-ready')" onerror="this.hidden=true; this.parentElement.classList.add('media-unavailable')">
+            <source src="https://github.com/user-attachments/assets/44c89f85-6e88-445e-93e1-214b03cc6a6c" type="video/mp4">
+          </video>
+          <a class="featured-media-fallback" href="https://atihmam-ats-application.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="project.atihmam.video.fallback">Preview unavailable — explore the live product.</a>
+          <figcaption data-i18n="project.atihmam.demo.one">Candidate intake</figcaption>
+        </figure>
+        <figure class="featured-demo">
+          <video controls preload="metadata" playsinline poster="https://github.com/user-attachments/assets/14f04546-fa68-4c55-a51b-f47501b5f1b6" aria-label="Atihmam ATS product demo 2" onloadedmetadata="this.classList.add('media-ready'); this.parentElement.classList.add('media-ready')" onerror="this.hidden=true; this.parentElement.classList.add('media-unavailable')">
+            <source src="https://github.com/user-attachments/assets/d42a69ef-b482-473f-ae0e-8fba2cb05a55" type="video/mp4">
+          </video>
+          <a class="featured-media-fallback" href="https://atihmam-ats-application.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="project.atihmam.video.fallback">Preview unavailable — explore the live product.</a>
+          <figcaption data-i18n="project.atihmam.demo.two">AI candidate analysis</figcaption>
+        </figure>
+        <figure class="featured-demo">
+          <video controls preload="metadata" playsinline poster="https://github.com/user-attachments/assets/14f04546-fa68-4c55-a51b-f47501b5f1b6" aria-label="Atihmam ATS product demo 3" onloadedmetadata="this.classList.add('media-ready'); this.parentElement.classList.add('media-ready')" onerror="this.hidden=true; this.parentElement.classList.add('media-unavailable')">
+            <source src="https://github.com/user-attachments/assets/19ad1638-4568-4003-99dd-28f19e6bc8e4" type="video/mp4">
+          </video>
+          <a class="featured-media-fallback" href="https://atihmam-ats-application.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="project.atihmam.video.fallback">Preview unavailable — explore the live product.</a>
+          <figcaption data-i18n="project.atihmam.demo.three">Recruitment pipeline</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="featured-actions">
+      <a class="btn btn-primary btn-sm" href="https://atihmam-ats-application.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="project.atihmam.live">Explore live application</a>
+      <a class="btn btn-outline btn-sm" href="https://atihmam-ats-application.onrender.com/docs" target="_blank" rel="noopener noreferrer" data-i18n="project.atihmam.api">Explore API docs</a>
+    </div>
+  </article>
 
   <!-- To add a live demo: put <a class="btn btn-primary btn-sm" href="URL" target="_blank" rel="noopener noreferrer" aria-label="Live demo: NAME (opens in new tab)">Live Demo</a> before the GitHub button.
        To use your own preview image: add img/projects/<data-slug>.webp (1200x600). Otherwise the GitHub preview image loads automatically. -->
